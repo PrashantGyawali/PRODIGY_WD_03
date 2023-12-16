@@ -1,0 +1,114 @@
+.online-multiplayer-menu-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: clamp(50px, min(14vw,14vh), 100px);
+    height: 90vh;
+  }
+.create-room-button {
+  background-color: #ffd500;
+}
+.room-button{
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  color: black;
+  font-size: clamp(15px,12vw, 40px);
+  margin:10px;
+  text-align: center;
+  width:clamp(200px, 80%, 500px);
+  height:55px;
+  line-height:normal;
+  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  justify-content: center;
+}
+
+.roomCodeDiv{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.room-button.join-room-button, .room-button.create-room-button{
+  z-index: 5;
+}
+
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+
+.join-room-button {
+  background-color: rgb(66, 249, 252);
+}
+
+.text-decor-none{
+    text-decoration: none;
+}
+
+
+.borderanimation{
+  border: 5px solid #0000;
+  background: linear-gradient(#ffd500, #ffd500) padding-box, linear-gradient(
+        var(--angle),
+        #2d1eff,
+        #FFF
+      ) border-box;
+  animation: 8s rotate linear infinite;
+}
+.room-button:hover>span{
+  display: block;
+  animation:  fontemphasis 1.7s infinite linear ;
+}
+
+@keyframes fontemphasis {
+  0% {
+    transform: scale(1,1);  
+  }
+  50% {
+    transform: scale(1.15,1.15);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+.borderanimation2{
+  border: 5px solid #0000;
+  background: linear-gradient(#42f9fc, #42f9fc) padding-box, linear-gradient(
+        var(--angle),
+        #ff6f00,
+        #FFF
+      ) border-box;
+  animation: 8s rotate linear infinite;
+  animation-delay: -4s;
+}
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.multiplayerTitle{
+  font-size: clamp(30px, 10vw, 30px);
+  font-family: "Comic Sans MS", cursive;
+  color: #00ffa6;
+  margin-bottom: 5px;
+  text-align: center;
+}

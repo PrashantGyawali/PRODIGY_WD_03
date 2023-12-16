@@ -1,0 +1,36 @@
+.multiplayermenu.text-green {
+    color: #00ffa6;
+    font-size: clamp(20px, 5vw, 40px);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.multiplayermenu.text-yellow {
+    color: yellow;
+    font-size:clamp(20px, 5vw, 40px);
+    text-decoration: none;
+    font-weight: bold;
+}
+.multiplayermenu.text-green:hover{
+    text-shadow: -1px 0 white;
+    animation: fontsizeanim 1s ease-in-out infinite alternate;
+}
+.multiplayermenu.text-yellow:hover{
+    text-shadow: -1px 0 rgb(255, 255, 255);
+    animation: fontsizeanim 1s ease-in-out infinite alternate;
+}
+
+@keyframes fontsizeanim{
+    0%{
+        font-size: clamp(20px, 5vw, 40px);
+    }
+    100%{
+        font-size: clamp(25px, 6vw, 45px);
+    }
+    
+}
+.multiplayermenu.div{
+    text-align: center;
+    width: 98vw;
+    font-family: "Comic Sans MS", cursive;
+}

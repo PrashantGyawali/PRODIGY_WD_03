@@ -1,0 +1,107 @@
+.wavyanimation {
+  animation: movingAnimation 4s infinite linear;
+}
+
+@keyframes movingAnimation {
+  0% {
+      transform: translateX(0px);
+      letter-spacing: 0px;
+  }
+  33% {
+      transform: translateX(-0.5px);
+      letter-spacing: 0.5px;
+  }
+  50% {
+      transform: translateX(0px);
+      letter-spacing: 1px;
+  }
+  66% {
+      transform: translateX(0.5px);
+      letter-spacing: 0.5px;
+  }
+  100% {
+      transform: translateX(0px);
+      letter-spacing: 0px;
+
+  }
+}
+
+.mainmenubtn{
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    width:clamp(200px, 80%, 500px);
+    font-size: clamp(8px,8vw, 40px);
+    font-family: "Comic Sans MS", cursive;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    border: 3px solid black;
+    margin:20px;
+    position: relative;
+}
+
+.pvpbtn::before{
+        content: '';
+        background-image: linear-gradient(to bottom, #000000 0%, #ffa200 100%);
+        top: -10px;
+        left: -10px;
+        bottom: -10px;
+        right: -10px;
+        position: absolute;
+        z-index:-1;
+        border-radius: 30px;
+}
+.pvebtn::before{
+    content: '';
+    background-image: linear-gradient(to bottom, #000000 0%,rgb(0, 140, 255) 100%);
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    position: absolute;
+    z-index:-1;
+    border-radius: 30px;
+}
+
+
+
+.mainmenubtn:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.pvpbtn:hover.pvpbtn::before{
+    content: '';
+    background-image: linear-gradient(to top, #000000 0%,rgb(0, 140, 255) 100%);
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    position: absolute;
+    z-index:-1;
+    border-radius: 30px;
+}
+
+.pvebtn:hover.pvebtn::before{
+    content: '';
+    background-image: linear-gradient(to top, #000000 0%, #ffa200 100%);
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    position: absolute;
+    z-index:-1;
+    border-radius: 30px;
+}
+
+.pvpbtn{
+    background-color: #ffc400;
+}
+
+.pvebtn{
+    background-color: aqua;
+}

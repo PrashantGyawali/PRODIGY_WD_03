@@ -1,0 +1,55 @@
+.roomdatadiv{
+    background-color: rgb(66, 168, 252);
+    box-sizing: border-box;
+    border-radius: 10px;
+    transform: translateY(-40px);
+    padding: 30px 10px 15px 10px;
+    width: 95%;
+    height: min-content;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color:rgb(0, 0, 0);
+    filter: hue-rotate(-40deg);
+}
+.motiondivFlex{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(200px, 80vw, 500px);
+}
+.roomdatadiv input , .roomdatadiv button{
+    display: block;
+    padding: 0.375rem ;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f8f9fa; 
+    background-color: #343a40; 
+    background-clip: padding-box;
+    border: 1px solid #343a40; 
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.roomdatadiv input:focus {
+    color: #f8f9fa; 
+    background-color: #252626;
+    border-color: #252626; 
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25); /* Bootstrap focus box shadow */
+}
+
+.roomdatadiv .roomCodeInput{
+    width: 95%;
+}
+
+.roomdatadiv .error{
+    color:hsl(-25, 100%, 50%);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.w-100{
+    width:max-content;
+}

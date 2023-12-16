@@ -1,0 +1,200 @@
+.board{
+    width: clamp(300px, 85%, 500px);
+    display: grid;
+    font-size: clamp(15px,15vw,100px);
+    aspect-ratio: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;    
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+:root{
+    --border: #1e90ff;
+    --border-width:3px;
+    --hover-opacity:0.3;
+    --hover-color: rgba(30, 144, 255, var(--hover-opacity));
+}
+
+.row1{
+    border-bottom: var(--border-width) solid var(--border);
+}
+.row2{
+    border-bottom: var(--border-width) solid var(--border);
+    border-top: var(--border-width) solid var(--border);
+}
+.row3{
+    border-top: var(--border-width) solid var(--border);
+}
+
+.col1{
+    border-right: var(--border-width) solid var(--border);
+}
+.col2{
+    border-right: var(--border-width) solid var(--border);
+    border-left: var(--border-width) solid var(--border);
+}
+.col3{
+    border-left: var(--border-width) solid var(--border);
+}
+
+.box{
+    font-size: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.filled-false{
+    cursor: pointer;
+}
+
+.filled-true{
+    cursor: default;
+}
+
+.X-hover:hover::after{
+content:"X";
+color: var(--hover-color);
+}
+.O-hover:hover::after{
+    content:"O";
+    color: var(--hover-color);
+}
+
+
+.strike{
+    position: absolute;
+    background-color: red;
+    width: 1vh;
+    height: 1vh;
+    opacity: 0;
+    top:0%;
+    left: 0%;
+    transition:  width 1s linear,height 1s linear,top 0s linear, left 0s linear;
+}
+
+.strike-row1{
+    opacity: 1;
+    width: 100%;
+    height: 1vh;
+    top: 15%;
+
+}
+.strike-row2{
+    opacity: 1;
+    width: 100%;
+    height: 1vh;
+    top: 48%;
+}
+.strike-row3{
+    opacity: 1;
+    width: 100%;
+    height: 1vh;
+    top: 83%;
+}
+
+.strike-col1{
+    opacity: 1;
+    height: 100%;
+    width: 1vh;
+    left: 16%;
+}
+.strike-col2{
+    opacity: 1;
+    height: 100%;
+    width: 1vh;
+    left: 49%;
+}
+.strike-col3{
+    opacity: 1;
+    height: 100%;
+    width: 1vh;
+    left: 83%;
+}
+
+.strike-diag1{
+    opacity: 1;
+    transition:  width 0s linear,height 0s linear,top 0s linear, left 0s linear;
+    height: 120%;
+    width: 1vh;
+    left:50%;
+    top:-10%;
+    transform: rotate(135deg);
+}
+.strike-diag2{
+    opacity: 1;
+    transition:  width 0s linear,height 0s linear,top 0s linear, left 0s linear;
+    height: 120%;
+    width: 1vh;
+    left:50%;
+    top:-10%;
+    transform: rotate(45deg);
+}
+
+.gameovermenu{
+    position: absolute;
+    background-color: rgba(36, 36, 36, 0.762);
+    font-size: clamp(15px,10vw,80px);
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.gameovermenu-text{
+    color: white;
+    text-wrap: nowrap;
+    margin: 5px 10px 5px 10px;
+}
+.gameovermenu-buttons>button{
+    margin: 10px 7px 10px 7px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(36, 36, 36, 0.762);
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    flex:1;
+    transition: background-color 0.5s linear;
+}
+.gameovermenu-buttons>button:hover{
+    border: 2px solid black;
+    background-color:white ;
+    color: rgb(36, 36, 36);
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+.gameovermenu-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gameoverdiv{
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgba(36, 36, 36, 0.762);
+    font-size: clamp(15px,10vw,80px);
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
